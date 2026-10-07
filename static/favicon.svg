@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="Cube">
+  <!-- Cursor-like geometric cube mark -->
+  <rect width="32" height="32" rx="7" fill="#0a0a0a"/>
+  <g transform="translate(16 16)">
+    <!-- top face -->
+    <path d="M0 -9.5 L8.2 -4.75 L0 0 L-8.2 -4.75 Z" fill="#A855F7"/>
+    <!-- left face -->
+    <path d="M-8.2 -4.75 L0 0 L0 9.5 L-8.2 4.75 Z" fill="#7C3AED"/>
+    <!-- right face -->
+    <path d="M8.2 -4.75 L0 0 L0 9.5 L8.2 4.75 Z" fill="#C084FC"/>
+    <!-- subtle inner edge highlight -->
+    <path d="M0 -9.5 L0 0 L8.2 -4.75 Z" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="0.6"/>
+    <path d="M0 0 L0 9.5" stroke="rgba(0,0,0,0.22)" stroke-width="0.7"/>
+    <path d="M0 0 L-8.2 -4.75" stroke="rgba(0,0,0,0.18)" stroke-width="0.6"/>
+    <path d="M0 0 L8.2 -4.75" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  </g>
+</svg>

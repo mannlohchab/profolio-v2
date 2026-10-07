@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Axum">
+  <title>Axum</title>
+  <path d="M12 2.5 L20.5 20.5 H16.7 L15.25 16.6 H8.75 L7.3 20.5 H3.5 L12 2.5 Z M12 8.2 L9.85 14.1 H14.15 L12 8.2 Z" fill="#5E6AD2"/>
+  <path d="M4 21.2 H20" stroke="#5E6AD2" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
