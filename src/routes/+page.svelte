@@ -366,7 +366,12 @@
 			<div class="projects-grid">
 				<div class="grid-vrail" aria-hidden="true"></div>
 				{#each projects as project}
-					<a href="/projects" class="project-card">
+					<a
+						href={project.metadata.site || '/projects'}
+						class="project-card"
+						target={project.metadata.site ? '_blank' : undefined}
+						rel={project.metadata.site ? 'noopener noreferrer' : undefined}
+					>
 						<h3 class="project-title">{project.metadata.title}</h3>
 						{#if project.metadata.stack}
 							<p class="project-meta">{project.metadata.stack.join(' · ')}</p>

@@ -75,6 +75,16 @@
 				
 				<div class="project-content">
 					<h2 class="project-name">{project.metadata.title}</h2>
+					{#if project.metadata.site}
+						<a
+							href={project.metadata.site}
+							class="project-site"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{project.metadata.site.replace(/^https?:\/\//, '')}
+						</a>
+					{/if}
 					<div class="project-description">
 						<svelte:component this={project.component} />
 					</div>
@@ -228,6 +238,23 @@
 		font-weight: 500;
 		color: var(--text);
 		letter-spacing: -0.01em;
+	}
+
+	.project-site {
+		align-self: flex-start;
+		margin-top: -0.35rem;
+		color: var(--text-muted);
+		font-family: 'Playfair Display', 'Georgia', serif;
+		font-style: italic;
+		font-size: 0.95rem;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		transition: color 0.2s ease, border-color 0.2s ease;
+	}
+
+	.project-site:hover {
+		color: var(--text);
+		border-bottom-color: var(--border);
 	}
 
 	.project-description {
