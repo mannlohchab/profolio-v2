@@ -54,7 +54,7 @@
 			role: 'Co-founder',
 			dates: '2026 — Present',
 			location: 'Remote · India',
-			src: '/ghostway.png',
+			src: '/ghostway.webp',
 			href: 'https://ghostway.in',
 			description: [
 				'Co-founding Ghostway.in, a food startup focused on modern dining experiences and digital-first operations.',
@@ -76,7 +76,7 @@
 			role: 'Co-founder & Adviser',
 			dates: '2024 — Present',
 			location: 'India',
-			src: '/kmos.png',
+			src: '/kmos.webp',
 			href: 'https://kmos.kmos.workers.dev/',
 			description: [
 				'Co-founding and advising KMOS, a software collective that designs and builds websites, apps, and the systems that run them.',

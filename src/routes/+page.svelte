@@ -1,9 +1,9 @@
 <script>
 	export let data;
 
-	import pfpLight from '$lib/assets/image-light.png';
-	import pfpDark from '$lib/assets/image.png';
-	import bannerLight from '$lib/assets/banners/banner-light.png';
+	import pfpLight from '$lib/assets/image-light.webp';
+	import pfpDark from '$lib/assets/image.webp';
+	import bannerLight from '$lib/assets/banners/banner-light.webp';
 	import bannerDark from '$lib/assets/banners/banner-dark.gif';
 	import verified from '$lib/assets/verified.png';
 	import sv_icon from '$lib/assets/favicon.svg';
@@ -464,7 +464,7 @@
 					<div class="edu-main">
 						<div class="logo-frame">
 							<div class="logo-inner">
-								<img src="/srm.png" alt="" class="logo" />
+								<img src="/srm.webp" alt="" class="logo" />
 							</div>
 						</div>
 						<div>
@@ -481,7 +481,7 @@
 					<div class="edu-main">
 						<div class="logo-frame">
 							<div class="logo-inner">
-								<img src="/cbse.png" alt="" class="logo" />
+								<img src="/cbse.webp" alt="" class="logo" />
 							</div>
 						</div>
 						<div>

@@ -83,7 +83,7 @@ html {
 
 body::after {
 	content: '';
-	background-image: url('/src/lib/assets/background/noise.png');
+	background-image: url('/src/lib/assets/background/noise.webp');
 	height: 300%;
 	width: 300%;
 	position: fixed;
