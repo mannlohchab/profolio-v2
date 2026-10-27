@@ -17,6 +17,7 @@
 		description: string[];
 		tech: TechItem[];
 		focus?: TechItem[];
+		blurred?: boolean;
 	};
 
 	const icon = (name: string, src: string, invertDark = false): TechItem => ({
@@ -78,6 +79,7 @@
 			location: 'India',
 			src: '/kmos.webp',
 			href: 'https://kmos.kmos.workers.dev/',
+			blurred: true,
 			description: [
 				'Co-founding and advising KMOS, a software collective that designs and builds websites, apps, and the systems that run them.',
 				'Guiding product direction, client delivery, and technical architecture across engagements in web, support, and automation.',
@@ -120,7 +122,7 @@
 				<div class="exp-main">
 					<div class="logo-frame">
 						<div class="logo-inner">
-							<img src={item.src} alt="" class="logo" />
+							<img src={item.src} alt="" class="logo" class:blurred={item.blurred} />
 						</div>
 					</div>
 					<div class="exp-copy">
@@ -129,6 +131,7 @@
 								<a
 									href={item.href}
 									class="exp-title link"
+									class:blurred={item.blurred}
 									target="_blank"
 									rel="noopener noreferrer"
 									on:click|stopPropagation
@@ -136,7 +139,7 @@
 									{item.title}
 								</a>
 							{:else}
-								<span class="exp-title">{item.title}</span>
+								<span class="exp-title" class:blurred={item.blurred}>{item.title}</span>
 							{/if}
 						</div>
 						<span class="exp-role">{item.role}</span>
@@ -197,7 +200,15 @@
 						<h4 class="detail-heading">What I've done</h4>
 						<ul class="desc-list">
 							{#each item.description as line}
-								<li>{line}</li>
+								<li>
+									{#if item.blurred}
+										{#each line.split(item.title) as part, partIdx}
+											{#if partIdx > 0}<span class="blurred">{item.title}</span>{/if}{part}
+										{/each}
+									{:else}
+										{line}
+									{/if}
+								</li>
 							{/each}
 						</ul>
 					</div>
@@ -335,6 +346,12 @@
 		display: block;
 	}
 
+	.logo.blurred {
+		filter: blur(6px);
+		transform: scale(1.15);
+		user-select: none;
+	}
+
 	.exp-copy {
 		display: flex;
 		flex-direction: column;
@@ -355,6 +372,15 @@
 
 	.exp-title.link:hover {
 		opacity: 0.75;
+	}
+
+	.blurred {
+		filter: blur(5px);
+		user-select: none;
+	}
+
+	.exp-title.blurred {
+		display: inline-block;
 	}
 
 	.exp-role {
