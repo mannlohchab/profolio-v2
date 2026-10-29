@@ -326,18 +326,7 @@
 				<span class="dot right" aria-hidden="true"></span>
 			</div>
 			<div class="gitcal-wrap">
-				<GitCal
-					username="mannlohchab"
-					months="12"
-					styles={{
-						commits0: 'var(--commit-0)',
-						commits1: 'var(--commit-1)',
-						commits2: 'var(--commit-2)',
-						commits3: 'var(--commit-3)',
-						commits4: 'var(--commit-4)',
-						'text-fill': 'var(--text-muted)'
-					}}
-				/>
+				<GitCal username="mannlohchab" months={9} />
 			</div>
 		</section>
 
@@ -1170,8 +1159,8 @@
 	}
 
 	.gitcal-wrap {
-		padding: 1rem 0 0.5rem;
-		overflow-x: auto;
+		padding: 0.35rem 0 0.5rem;
+		overflow: visible;
 	}
 
 	.skills-grid {
